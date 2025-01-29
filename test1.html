@@ -1,0 +1,348 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css2?family=Trenda:wght@700&display=swap" rel="stylesheet">
+    <title>Crono</title>
+    <style>
+      
+
+html {
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+body {
+      margin: 0;
+      font-family: 'Trenda', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+.box {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80%;
+  max-width: 400px;
+  padding: 10px;
+  margin-left: 30px;
+}
+h1 {
+    margin: 10px 0 0 20px;
+    user-select: none;
+    color: #f5f5f5;
+}
+
+footer {
+    text-align: center;
+    user-select: none;
+}
+
+.container {
+   
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-left:100px;
+}
+
+.time {
+    font-size: 5rem;
+    margin-bottom: 10px;
+    user-select: none;
+}
+
+.controls button {
+    background-color: #000000;
+    color: white;
+    margin: 19px 5px;
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    transition: 0.1s;
+    cursor: pointer;
+}
+
+.controls2 button {
+    background-color: #08c4ff;
+    margin: 10px 5px;
+    width: 300px;
+    height: 40px;
+    padding: 10px 20px 10px 20px;
+    font-size: 1rem;
+    border-radius: 4px;
+    border: none;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+.controls3 button {
+    background-color: #000000;
+    color: white;
+    width: 85px;
+    margin: 10px 5px;
+    padding: 10px 20px 10px 20px;
+    font-size: 13px;
+    border-radius: 4px;
+    border: none;
+    transition: 0.8s;
+    cursor: pointer;
+}
+
+
+
+
+
+@media(max-width:480px) {
+    h1 {
+        font-size: 1.2rem;
+    }
+    .container {
+        max-width: 200px;
+    }
+    .time {
+        font-size: 5rem;
+    }
+    .controls button {
+        padding: 5px;
+        margin: 0.5px;
+    }
+}
+@media screen and (max-width: 480px) {
+  .stopwatch {
+    font-size: 2.75rem;
+  }
+  .milliseconds {
+    font-size: 2rem;
+  }
+}
+
+.navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      border-top-left-radius: px;
+      border-top-right-radius: px;
+    }
+
+    .imgnav{
+        width: 35px;
+    }
+
+    .imgnav2{
+        width: 28px;
+    }
+
+    .imgnav3{
+        width: 35px;
+    }
+
+    .imgnav4{
+        width: 35px;
+    }
+
+    .navbar-item {
+      text-align: center;
+      color: #fff;
+      font-size: 14px;
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .navbar-item.active {
+      color: #08c4ff;
+      font-weight: bold;
+    }
+
+    .navbar-icon {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .navbar-item.active .navbar-icon {
+      color: #7dfc00;
+    }
+
+    .imgabout{
+        width: 230px;
+        margin-left: 90px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .icons img {
+      width: 25px;
+      margin-left: 15px;
+    }
+
+    </style>
+</head>
+<body>
+    <header>
+        <img src="img/banner no back black.png" class="logo" alt="">
+        <div class="icons">
+          <a href="#"><img src="img/free-instagram-logo-icon-3497-thumb.png" alt="Instagram"></a>
+          <a href="about.html"><img src="img/about-icon-23.png" alt="Info"></a>
+        </div>
+      </header>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+
+    <!-- عناصر الصوت -->
+    <audio id="startSound" src="audio/start.mp3"></audio>
+    <audio id="stopSound" src="audio/finsh.mp3"></audio>
+
+    <img class="imgabout" src="img/banner no back black.png" alt="">
+    <br>
+    <h1><i class="fa-solid fa-stopwatch"></i> Stopwatch</h1>
+    <div class="container">
+        <div class="time">
+            00:00:00
+        </div>
+        <br>
+        <br>
+        <div class="controls">
+            <button id="start">START</button>
+        </div>
+
+        <div class="controls2">
+          <button id="lap">LAP</button>
+      </div>
+
+      <div class="controls3">
+        <button id="stop">FINISH</button>
+        <button id="reset">PAUSE</button>
+    </div>
+
+        <div class="lapping">
+            <h4 id="lap1"></h4>
+            <h4 id="lap2"></h4>
+            <h4 id="lap3"></h4>
+            <h4 id="lap4"></h4>
+            <h4 id="lap5"></h4>
+        </div>
+    </div>
+
+    <div class="navbar">
+        <a href="home2.html" class="navbar-item">
+          <div class="navbar-icon"><img class="imgnav" src="img/icon krodin navbar.png" alt=""></div>
+          <div>GYMKRODIN</div>
+        </a>
+        <a href="#" class="navbar-item">
+          <div class="navbar-icon"><img class="imgnav2" src="img/fire-icon-429x512-5c5hagz2.png" alt=""></div>
+          <div>TRAINING</div>
+        </a>
+        <a href="running.html" class="navbar-item active">
+            <div class="navbar-icon"><img class="imgnav3" src="img/233146 tt.png" alt=""></div>
+            <div>RUNNING</div>
+          </a>
+        <a href="#" class="navbar-item">
+          <div class="navbar-icon"><img class="imgnav4" src="img/shopping-icon-14.png" alt=""></div>
+          <div>SHOPPING</div>
+        </a>
+      </div>
+
+  <script>
+    var time_ele = document.getElementsByClassName("time")[0];
+    var start_btn = document.getElementById("start");
+    var lap_btn = document.getElementById("lap");
+    var stop_btn = document.getElementById("stop");
+    var reset_btn = document.getElementById("reset");
+    var l1 = document.getElementById("lap1");
+    var l2 = document.getElementById("lap2");
+    var l3 = document.getElementById("lap3");
+    var l4 = document.getElementById("lap4");
+    var l5 = document.getElementById("lap5");
+
+    var startSound = document.getElementById("startSound");
+    var stopSound = document.getElementById("stopSound");
+
+    let seconds = 0;
+    let interval = null;
+    let ctr = 0;
+
+    start_btn.addEventListener("click", start);
+    lap_btn.addEventListener("click", lap);
+    stop_btn.addEventListener("click", stop);
+    reset_btn.addEventListener("click", reset);
+
+    function timer() {
+        seconds++;
+
+        let hrs = Math.floor(seconds / 3600);
+        let mins = Math.floor((seconds - (hrs * 3600)) / 60);
+        let sec = seconds % 60;
+
+        if (sec < 10) sec = "0" + sec;
+        if (mins < 10) mins = "0" + mins;
+        if (hrs < 10) hrs = "0" + hrs;
+
+        time_ele.innerHTML = `${hrs}:${mins}:${sec}`;
+    }
+
+    function start() {
+        if (interval) {
+            return;
+        }
+
+        // تشغيل الصوت عند الضغط على Start
+        startSound.play();
+
+        interval = setInterval(timer, 1000);
+    }
+
+    function lap() {
+        ctr++;
+        if (ctr % 5 == 1) l1.innerHTML = "Lap " + ctr + ":  " + time_ele.innerHTML;
+        if (ctr % 5 == 2) l2.innerHTML = "Lap " + ctr + ":  " + time_ele.innerHTML;
+        if (ctr % 5 == 3) l3.innerHTML = "Lap " + ctr + ":  " + time_ele.innerHTML;
+        if (ctr % 5 == 4) l4.innerHTML = "Lap " + ctr + ":  " + time_ele.innerHTML;
+        if (ctr % 5 == 0) l5.innerHTML = "Lap " + ctr + ":  " + time_ele.innerHTML;
+    }
+
+    function stop() {
+        // تشغيل الصوت عند الضغط على Stop
+        stopSound.play();
+
+        clearInterval(interval);
+        interval = null;
+    }
+
+    function reset() {
+        stop();
+        seconds = 0;
+        ctr = 0;
+        time_ele.innerHTML = "00:00:00";
+    }
+  </script>
+</body>
+
+</html>

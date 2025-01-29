@@ -1,0 +1,385 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gymkrodin</title>
+  <link href="https://fonts.googleapis.com/css2?family=Trenda:wght@700&display=swap" rel="stylesheet">
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Trenda', sans-serif;
+      background-color: #f5f5f5;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .icons img {
+      width: 25px;
+      margin-left: 15px;
+    }
+
+    .content {
+      padding: 20px;
+    }
+
+    .section {
+      margin-bottom: 20px;
+    }
+
+    .section-title {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-left: 20px;
+    }
+
+    .section-title2 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+
+    .section-title3 {
+      font-size: 1.2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+      margin-left: 0px;
+    }
+
+    .image-box {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+    }
+
+    .image-box a {
+      display: block;
+      width: calc(50% - 7.5px);
+      height: 100px;
+      border-radius: 8px;
+      overflow: hidden;
+      transition: transform 0.3s ease;
+    }
+
+    .image-box a img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .image-box a:hover {
+      transform: scale(1.05);
+    }
+
+    .textpro{
+      margin-right: 400px;
+      font-size: 1rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .image-box a.large {
+      width: 100%;
+      height: 150px;
+    }
+
+    body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        .navbar {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      display: flex;
+      justify-content: space-around;
+      align-items: center;
+      padding: 10px 0;
+      background: rgba(0, 0, 0, 0.5);
+      backdrop-filter: blur(10px);
+      box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.3);
+      border-top-left-radius: px;
+      border-top-right-radius: px;
+    }
+
+    .imgnav{
+        width: 35px;
+    }
+
+    .imgnav2{
+        width: 28px;
+    }
+
+    .imgnav3{
+        width: 35px;
+    }
+
+    .imgnav4{
+        width: 35px;
+    }
+
+    .navbar-item {
+      text-align: center;
+      color: #fff;
+      font-size: 10px;
+      text-decoration: none;
+      flex: 1;
+    }
+
+    .navbar-item.active {
+      color: #08c4ff;
+      font-weight: bold;
+    }
+
+    .navbar-icon {
+      font-size: 20px;
+      margin-bottom: 5px;
+    }
+
+    .navbar-item.active .navbar-icon {
+      color: #7dfc00;
+    }
+
+    .imgabout{
+        width: 230px;
+        margin-left: 90px;
+    }
+
+    header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 20px;
+      background-color: #fff;
+      border-bottom: 1px solid #ddd;
+    }
+
+    .logo {
+      width: 150px;
+    }
+
+    .icons img {
+      width: 25px;
+      margin-left: 15px;
+    }
+
+    .slider-container {
+      width: 90%;
+      max-width: 600px;
+      overflow-x: auto;
+      white-space: nowrap;
+      scroll-snap-type: x mandatory;
+      -webkit-overflow-scrolling: touch;
+      margin-left: 10px;
+    }
+
+    .slider-container::-webkit-scrollbar {
+      display: none; /* Hide scrollbar for cleaner look */
+    }
+
+    .slide {
+      display: inline-block;
+      width: 200px;
+      height: 200px;
+      margin-right: 15px;
+      border-radius: 10px;
+      color: rgb(0, 0, 0);
+      scroll-snap-align: start;
+      padding: 10px;
+      position: relative;
+      text-decoration: none;
+    }
+
+    
+
+    .slide img {
+      width: 100%;
+      height: 140px;
+      border-radius: 8px;
+      object-fit: cover;
+    }
+
+    .slide h3 {
+      margin: 10px 0 0;
+      font-size: 16px;
+      font-weight: bold;
+    }
+
+    .slide p {
+      margin: 5px 0 0;
+      font-size: 14px;
+      color: #bbb;
+    }
+
+    .new-badge {
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      background: #ff4500;
+      color: white;
+      padding: 5px 10px;
+      font-size: 12px;
+      border-radius: 20px;
+    }
+    
+
+
+    /* Media Query for smaller devices */
+    @media (max-width: 600px) {
+      .image-box a {
+        width: 100%;
+      }
+    }
+
+
+    .container3 {
+            text-align: center;
+        }
+
+        h1 {
+            margin-bottom: 20px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 20px;
+        }
+
+        .card {
+            position: relative;
+            width: 150px;
+            height: 150px;
+            overflow: hidden;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        }
+
+        .card img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+        .card:hover img {
+            transform: scale(1.1);
+        }
+
+        .card span {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            background-color: rgba(0, 0, 0, 0.6);
+            color: white;
+            padding: 5px 10px;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+            
+
+
+  </style>
+</head>
+<body>
+  <header>
+    <img src="img/banner no back black.png" class="logo" alt="">
+    <div class="icons">
+      <a href="https://www.instagram.com/gymkrodin/"><img src="img/free-instagram-logo-icon-3497-thumb.png" alt="Instagram"></a>
+      <a href="about.html"><img src="img/about-icon-23.png" alt="Info"></a>
+    </div>
+  </header>
+
+  
+  <div class="content">
+    <div class="section">
+      <div class="section-title3">GYMKRODIN</div>
+      <div class="image-box">
+        <a href="#link1" class="large">
+          <img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475818303_589152490628032_6329153839443751197_n.jpg?_nc_cat=100&ccb=1-7&_nc_sid=127cfc&_nc_ohc=EHyWFsMnCWAQ7kNvgF-E9fU&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=ACLScFA9mcOjYOSPQMDtxhO&oh=00_AYCR_0zu0ellgNKg4-wUiUC9F2YlZMiEVl2q8tHOTI4TQQ&oe=67A03CBD" alt="Gymkrodin Image">
+        </a>
+      </div>
+    </div>
+    <div class="section-title2">YOUR PLANS</div>
+    <div class="container3">
+      <div class="grid">
+          <div class="card">
+             <a href="listfitnass.html"> <img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Treadmill"></a>
+          </div>
+          <div class="card">
+              <a href="football.html"><img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Outdoor Running"></a>
+          </div>
+          <div class="card">
+            <a href="boxing.html"><img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Outdoor Running"></a>
+          </div>
+          <div class="card">
+            <a href="running.html"><img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Outdoor Running"></a>
+          </div>
+      </div>
+  </div>
+
+</div>
+
+  <br>
+  <div class="section-title">TRAINING PROGRAMS  FOR YOUR GOAL</div>
+  <div class="slider-container">
+    <a href="https://example.com/strength" class="slide">
+      <img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Strength">
+      <h3>BEGINNER
+      </h3>
+      <p>BODY FAT > 40%</p>
+    </a>
+    <a href="https://example.com/flexibility" class="slide">
+      <img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Flexibility">
+      <h3>INTERMEDIATE</h3>
+      <p>BODY FAT 30% - 40%</p>
+    </a>
+    <a href="https://example.com/cardio" class="slide">
+      <img src="https://scontent.ftng2-1.fna.fbcdn.net/v/t39.30808-6/475385305_589143030628978_6274445385570659660_n.jpg?_nc_cat=105&ccb=1-7&_nc_sid=127cfc&_nc_ohc=LLCTjHjm7L4Q7kNvgE6Zy9x&_nc_zt=23&_nc_ht=scontent.ftng2-1.fna&_nc_gid=AoTyr8lAJGY0mL2VOpT6gWc&oh=00_AYCrVDzlPA8n4yMDxtJ0N-OUGnb37-XGzGh1Q5_i6rDw9Q&oe=67A05C88" alt="Cardio">
+      <h3>Cardio</h3>
+      <p>BODY FAT 30%</p>
+    </a>
+  </div>
+
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+  <br>
+
+  <div class="navbar">
+    <a href="home2.html" class="navbar-item active">
+      <div class="navbar-icon"><img class="imgnav" src="img/icon krodin navbar tt.png" alt=""></div>
+      <div>GYMKRODIN</div>
+    </a>
+    <a href="training.html" class="navbar-item">
+      <div class="navbar-icon"><img class="imgnav2" src="img/fire-icon-429x512-5c5hagz2.png" alt=""></div>
+      <div>TRAINING</div>
+    </a>
+    <a href="running.html" class="navbar-item">
+        <div class="navbar-icon"><img class="imgnav3" src="img/233146.png" alt=""></div>
+        <div>RUNNING</div>
+      </a>
+    <a href="#" class="navbar-item">
+      <div class="navbar-icon"><img class="imgnav4" src="img/shopping-icon-14.png" alt=""></div>
+      <div>SHOPPING</div>
+    </a>
+  </div>
+</body>
+</html>
